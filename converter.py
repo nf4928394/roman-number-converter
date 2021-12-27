@@ -12,7 +12,7 @@ def romanToNum(str):
 # Function that converts a number to a Roman numeral.
 def numToRoman(int):
 
-# Function that receives user input, performs error control, and prints out the returned conversion.  
+# Function that receives user input, performs error control, calls one of the two functions above, and prints out the returned conversion.  
 def receiveUserInput():
 	user_input = input("Please enter your Roman numeral or number here: ")
 	try:
