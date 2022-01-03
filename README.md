@@ -11,4 +11,4 @@ This Python program asks the user to input either a Roman numeral or a regular n
 
 The program's code can be found in the file 'converter.py'. Please see the Wiki tab for function explanations and test cases.
 
-Thank you for viewing my project!
+Thank you for checking out my project!
