@@ -1,6 +1,6 @@
 # Roman Numeral/Number Converter
 
-*(Note: project is still in development. Anticipated V1 completion date of January 14th 2022, with future updates planned!)*
+*(Note: project is still in development. Anticipated completion date of January 14th 2022, with future updates planned!)*
 
 ### Summary
 Program for converting Roman numerals to standard numbers, and vice versa.
