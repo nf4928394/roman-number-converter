@@ -5,9 +5,9 @@ def romanToNum(str):
 	val = 0 # Used to store the ongoing total.
 	for i in range(len(str)):
 		if i + 1 < len(str) and map[str[i]] < map[str[i+1]]:
-			val -= map[srt[i]]
+			val -= map[str[i]]
 		else:
-			val += map[srt[i]]
+			val += map[str[i]]
 	return val
 
 # Function that converts a number to a Roman numeral. 
@@ -30,31 +30,39 @@ def numToRoman(int):
 
 # Function that receives user input, performs error control, calls one of the two functions above, and prints out the returned conversion.  
 # Status: IN PROGRESS; function needs to be completed and tested before being marked complete.
-def receiveUserInput():
-	user_input = input("Please enter your Roman numeral or number here: ")
-	try:
-		test = int(user_input)
-	except:
-		print("You've entered the string:", user_input)
-		result = romanToNum(user_input)
+def receiveUserInput(inp):
+    try:
+        conv = int(inp)
+        print("\nYou entered the number:", conv)
+        result = numToRoman(conv)
+        print("The Roman numeral for this number is:", result)
+    except:
+        print("\nYou entered the Roman numeral:", inp)
+        result = romanToNum(inp)
+        print("The numerical version of this Roman numeral is:", result)
+
+    print("\nIf you'd like to run a new conversion, please enter a new number or Roman numeral below.")
+    print("Otherwise, type \"end\" in all lowercase to quit the program.")
+    inp2 = input("")
+    if inp2 == "end":
+        quit()
+    else:
+        receiveUserInput(inp2)
 	
 # Execution of receiveUserInput() function.
 print('''
 
-	||| ROMAN NUMERAL/NUMBER CONVERTER |||
-			||| By nf4928394 |||
+	||| ROMAN NUMERAL/NUMBER CONVERTER by nf4928394 |||
 
-	Welcome! This program converts a Roman numeral to a standard number, or a standard number to a Roman numeral.
+Welcome! This program converts a Roman numeral to a standard number, and vice-versa.
 
-	Restrictions:
+Restrictions:
 
-	--The number (or number equivalent, if entering a Roman numeral) must fall between 1 and 3999.
+--The number or Roman numeral must have a value between 1 and 3999.
 
-	--If entering a number, it must be an integer (i.e. no decimal places). The number will automatically round down if any decimals are present.
+--If entering a number, it must be an integer (i.e. no decimal places). The number will automatically round down if any decimals are present.
 
-	--If entering a Roman numeral, it must be a string and must only contain the following letters: I, V, X, L, C, D, M.
-
-	--If entering a Roman numeral, it must be formatted such that letters are by decreasing value (e.g. XXVI), unless
-	denoting numbers 4 (IV), 9 (IX), 40 (XL), 90 (XC), etc.
-	______________________________________________________________''')
-receiveUserInput()
+--If entering a Roman numeral, it must be a string and must only contain the following letters: I, V, X, L, C, D, M.
+______________________________________________________________''')
+inp = input("\nPlease enter your Roman numeral or number here: ")
+receiveUserInput(inp)
