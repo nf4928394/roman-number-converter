@@ -56,7 +56,7 @@ def receiveUserInput(inp):
 # Execution of receiveUserInput() function.
 print('''
 
-||| ROMAN NUMERAL/NUMBER CONVERTER by nf4928394 |||
+||| ROMAN NUMERAL/NUMBER CONVERTER by nf4928394 -- Version 1.0 |||
 
 Welcome! This program converts a Roman numeral to a standard number, and vice-versa.
 
