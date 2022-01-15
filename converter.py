@@ -53,7 +53,7 @@ def receiveUserInput(inp):
 	else:
 		receiveUserInput(inp2)
 	
-# Execution of receiveUserInput() function.
+# Initial message and execution of receiveUserInput() function.
 print('''
 
 ||| ROMAN NUMERAL/NUMBER CONVERTER by nf4928394 -- Version 1.0 |||
